@@ -1,0 +1,30 @@
+{
+  "name": "gestion-d-utilisateurs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HAMZA1619/Gestion-d-utilisateurs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HAMZA1619/Gestion-d-utilisateurs/issues"
+  },
+  "homepage": "https://github.com/HAMZA1619/Gestion-d-utilisateurs#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
