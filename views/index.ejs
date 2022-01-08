@@ -1,0 +1,18 @@
+<%- include('./layout/header')  %>
+<%- include('./layout/navbar')  %>
+<div class="container">
+<div class="row text-center">
+    <h1 class="col-md  alert alert-primary py-4 m-2"><strong class="text-primary">+<%= data.length %> </strong> Utilisateurs</h1>
+    <h1 class="col-md alert alert-danger py-4 m-2"><strong class="text-danger ">+<%= departements.length %> </strong> Departements</h1>
+</div>
+<% departements.forEach(element => { let count = 0 %>
+ <% data.forEach(item => { %>
+  <% if (element.id == item.idDepartement) count++  %>
+ <% })let value = count/data.length*100 %>
+ <h3 for=""><%=element.nomDepartement%> <div class="float-end"><%= value.toFixed(2)%> %</div></h3>
+ <progress class="female" value='<%=value%>' max='100'>  </progress>
+<% }) %>
+
+</div>
+
+<%- include('./layout/footer')  %>

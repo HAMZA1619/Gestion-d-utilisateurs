@@ -1,0 +1,60 @@
+<%- include('./layout/header')  %>
+<%- include('./layout/navbar')  %>
+<h2 class="text-center mt-2">Departements</h2>
+<table class="table table-light table-striped container mt-2">
+    <thead>
+      <tr>
+        <th >Nom</th>
+        <th >Description</th>
+        <th >Date</th>
+        <th >Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% if (data){%> 
+ <% data.forEach(item => { %> 
+      <tr>
+        <th ><a class="link-dark text-decoration-none" href="/<%= item.id %>"><%= item.nomDepartement %></a> </th>
+        <td><%= item.description %> </td>
+        <td><%= item.createdAt.toISOString().substring(0, 10) %> </td>
+        <td><a data-toggle="modal" data-target="#update-departement<%= item.id %> " class="text-info">
+            <i class="fas fa-edit"></i></a> 
+            <a href="/delete_departement/<%= item.id %>" class="text-danger delete"> <i class="far fa-trash-alt"></i>
+            </a></td>
+      </tr>
+      <div class="modal fade" id="update-departement<%= item.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header">
+           <h3 class="modal-title" id="staticBackdropLabel">Modifier Departement</h3>
+           <button type="button" class="close btn btn-light" data-dismiss="modal" aria-label="Close">
+           <i class="fas fa-times"></i>
+           </button>
+         </div>
+         <div class="modal-body">
+        <form method="POST" action="/update_departement/<%= item.id %>">
+         <div class="card p-3 radius m-auto  " >
+         <div class="card-body">
+             <div class="form-group mt-2">
+               <label for="">Nom :</label>
+               <input type="text" value="<%= item.nomDepartement %> " class="form-control" name="nom" required>
+             </div>
+             <div class="form-group mt-2 ">
+               <label for="">Description :</label>
+               <textarea name="description" class="form-control"  required><%= item.description %></textarea>
+             </div>
+             
+              <button type="submit" name="ajouter" class="btn mt-3 form-control btn-info btn-block">Ajouter</button>
+             </div>
+           </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+<%  })} %> 
+    </tbody>
+  </table>
+
+
+<%- include('./layout/footer')  %>

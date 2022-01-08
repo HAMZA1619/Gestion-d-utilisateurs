@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(27, 209, 97) !important;
+}
+.logo{
+    max-width: 80px;
+}
+th, td{
+    width: 200px !important;
+    text-align: center !important;
+}
+.delete{
+    margin-left: 25px !important;
+}
+progress[value]{
+   
+    -webkit-appearance: none;
+    margin-bottom: 20px;
+    width: 100%; 
+    height: 20px;
+  }
+  
+    progress[value]::-webkit-progress-value {
+        background-color: #0e70f0;
+        border-radius: 10px;
+      }
+      progress[value]::-webkit-progress-bar {
+        background-color: #ffffff;
+        border-radius: 12px;
+        border: 1px solid #423d3d;
+      }

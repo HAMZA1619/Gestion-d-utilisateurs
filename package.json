@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/HAMZA1619/Gestion-d-utilisateurs#readme",
   "dependencies": {
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "mysql2": "^2.3.3",
