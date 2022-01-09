@@ -1,15 +1,27 @@
 <%- include('./layout/header')  %>
 <%- include('./layout/navbar')  %>
-<div class="container">
-<div class="row text-center">
-    <h1 class="col-md  alert alert-primary py-4 m-2"><strong class="text-primary">+<%= data.length %> </strong> Utilisateurs</h1>
-    <h1 class="col-md alert alert-danger py-4 m-2"><strong class="text-danger ">+<%= departements.length %> </strong> Departements</h1>
+<div class="container ">
+    <div class="text-center">
+       <img src="../assets/img/User.png" class="w-50" alt="">
+        <h1 >Bienvenu</h1>
+        <hr>
+        <h2>Les statistiques</h2>
+    </div>
+<div class="row text-center gap-3 mt-4">
+    <h2 class="col-md  alert alert-primary  "><strong class="text-primary">+<%= data.length %> </strong> Utilisateurs</h2>
+    <h2 class="col-md alert alert-danger "><strong class="text-danger ">+<%= departements.length %> </strong> Departements</h2>
 </div>
-<% departements.forEach(element => { let count = 0 %>
+<br>
+<hr>
+<h2 class="text-center">Pourcentage d'utilisateurs dans chaque département</h2>
+<br>
+<% departements.forEach(element => { 
+    let count = 0 %>
  <% data.forEach(item => { %>
   <% if (element.id == item.idDepartement) count++  %>
- <% })let value = count/data.length*100 %>
- <h3 for=""><%=element.nomDepartement%> <div class="float-end"><%= value.toFixed(2)%> %</div></h3>
+ <% })
+ let value = count/data.length*100 %>
+ <h3 for=""><%=element.nomDepartement%>  : <div class="float-end"><%= value.toFixed(2)%> %</div> </h3>
  <progress class="female" value='<%=value%>' max='100'>  </progress>
 <% }) %>
 

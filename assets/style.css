@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
 }
 body{
-    background-color: rgb(27, 209, 97) !important;
+  
+    background-color:#4dc0b5 !important;
 }
 .logo{
     max-width: 80px;
+}
+.btn-success{
+    background-color: #4dc0b5 !important;
 }
 th, td{
     width: 200px !important;
@@ -26,7 +30,7 @@ progress[value]{
   }
   
     progress[value]::-webkit-progress-value {
-        background-color: #0e70f0;
+        background-color: #3490dc;
         border-radius: 10px;
       }
       progress[value]::-webkit-progress-bar {

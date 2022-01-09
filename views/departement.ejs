@@ -1,7 +1,7 @@
 <%- include('./layout/header')  %>
 <%- include('./layout/navbar')  %>
-<h2 class="text-center mt-2">Departements</h2>
-<table class="table table-light table-striped container mt-2">
+<h2 class="text-center mt-2">Les departements</h2>
+<table class="table  table-striped container mt-2">
     <thead>
       <tr>
         <th >Nom</th>
@@ -14,7 +14,7 @@
         <% if (data){%> 
  <% data.forEach(item => { %> 
       <tr>
-        <th ><a class="link-dark text-decoration-none" href="/<%= item.id %>"><%= item.nomDepartement %></a> </th>
+        <th ><a  class="link-dark text-decoration-none" href="/departement/<%= item.id %>"><%= item.nomDepartement %></a> </th>
         <td><%= item.description %> </td>
         <td><%= item.createdAt.toISOString().substring(0, 10) %> </td>
         <td><a data-toggle="modal" data-target="#update-departement<%= item.id %> " class="text-info">

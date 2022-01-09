@@ -31,11 +31,11 @@ app.get('/departement' ,(req,res)=>{
     })
 })
 // USERS OF DEPARTEMENT PAGE
-app.get('/:id' ,(req,res)=>{
+app.all('/departement/:id' ,(req,res)=>{
     Departement.findAll().then((departements)=>{
         Utilisateur.findAll({ where: { idDepartement : req.params.id }}).then((data)=>{
            res.render('utilisateur',{ data , url : '/utilisateur', departements , id :  req.params.id})
-            
+        
         })
     })
 })

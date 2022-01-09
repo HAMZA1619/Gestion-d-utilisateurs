@@ -1,7 +1,7 @@
 <%- include('./layout/header')  %>
 <%- include('./layout/navbar')  %>
 <h2 class="text-center mt-2">
-    Utilisteurs
+   Les utilisteurs
     <% if (typeof id != 'undefined') {
     departements.forEach(title => { %>
      <% if (title.id == id) { %>
@@ -9,7 +9,7 @@
        <strong><%= title.nomDepartement %> </strong>
      <% }}) } %>
 </h2>
-<table class="table table-success table-striped container mt-2">
+<table class="table table-striped container mt-2">
     <thead>
       <tr>
         <th >Nom</th>

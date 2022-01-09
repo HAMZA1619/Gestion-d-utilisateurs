@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/"><img src="assets/img/gestion.png" alt="" class="logo" > </a>
+      <a class="navbar-brand" href="/"><img src="../assets/img/gestion.png" alt="" class="logo" > </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,12 +16,12 @@
         </ul>
         <div class="d-flex gap-3">
          <% if (url == '/') { %>
-            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-utilisateur">Ajouter utilisateur</button>
-            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-departement">Ajouter departement</button>
+            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-utilisateur"><i class="fas fa-plus-circle"></i> Ajouter utilisateur</button>
+            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-departement"><i class="fas fa-plus-circle"></i> Ajouter departement</button>
          <% } else if (url == '/utilisateur'  ) { %>
-            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-utilisateur">Ajouter</button>
+            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-utilisateur"><i class="fas fa-plus-circle"></i> Ajouter</button>
          <% } else if (url == '/departement') { %>
-            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-departement">Ajouter</button>
+            <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#add-departement"><i class="fas fa-plus-circle"></i> Ajouter</button>
          <% } %>
         </div>
       </div>
