@@ -98,8 +98,11 @@ app.post('/update_departement/:id',(req,res)=>{
     res.redirect('/departement')
     return
 })
+// 404 PAGE
+app.use((req,res)=>{
+        res.status(404).render('404')
 
-
+})
 
 app.listen(3000, () => {
     console.log(`listening`)
